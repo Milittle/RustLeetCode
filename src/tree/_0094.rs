@@ -1,4 +1,5 @@
 // Definition for a binary tree node.
+use std::borrow::Borrow;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -36,10 +37,4 @@ impl Solution {
         res.push(root.borrow().val);
         Solution::inorder(&root.borrow().right, res);
     }
-}
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn test_01() {}
 }

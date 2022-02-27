@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut h : HashMap<i32, i32> = HashMap::new();
+        let mut h: HashMap<i32, i32> = HashMap::new();
         for (i, num) in nums.iter().enumerate() {
             let num_left = target - num;
             if h.contains_key(&num_left) {

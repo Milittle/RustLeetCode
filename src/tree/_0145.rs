@@ -1,4 +1,8 @@
 // Definition for a binary tree node.
+use std::borrow::Borrow;
+use std::cell::RefCell;
+use std::rc::Rc;
+
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
     pub val: i32,
@@ -17,8 +21,6 @@ impl TreeNode {
     }
 }
 
-use std::cell::RefCell;
-use std::rc::Rc;
 impl Solution {
     pub fn postorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         fn preorder(root: Option<&Rc<RefCell<TreeNode>>>, res: &mut Vec<i32>) {
